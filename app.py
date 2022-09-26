@@ -3,6 +3,16 @@ from routes import *
 
 app = Flask(__name__)
 
+@app.route('/CampoSoft', methods=['POST'])
+def post(self):
+    return app.add_url_rule(routes["informacion"],view_func=routes["Informacion_controllers"])
+
+
+
+
+
+
+
 #Ruta general(comprobacion de servicios)
 app.add_url_rule(routes["informacion"],view_func=routes["Informacion_controllers"])
 
