@@ -30,7 +30,7 @@ conexionEliPro=Producto()
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/CampoSoft', methods=['POST'])
+@app.route('/CampoSoft',methods=['POST'])
 def post():
         #Va a llamar la conexiona la base de datos
         estado=conexionInfo.estado()
