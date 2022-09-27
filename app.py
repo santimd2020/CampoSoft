@@ -30,7 +30,6 @@ app = Flask(__name__)
 
 @app.route('/CampoSoft', methods=['POST'])
 def post(self):
-    def post(self):
         #Va a llamar la conexiona la base de datos
         estado=conexionInfo.estado()
         if(estado=="000"):
@@ -54,7 +53,6 @@ def post(self):
                                "Alvaro Perez",
                                "Marco Antonio"
                                )},{"¡Atencion!": "Comuniquese con el administrador del sistema"},{"¡Error!":estado}),500
-    return app.add_url_rule(routes["informacion"],view_func=routes["Informacion_controllers"])
 
 
 """
