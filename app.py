@@ -54,10 +54,7 @@ def post(self):
                                "Alvaro Perez",
                                "Marco Antonio"
                                )},{"¡Atencion!": "Comuniquese con el administrador del sistema"},{"¡Error!":estado}),500
-
-
-
-
+    return app.add_url_rule(routes["informacion"],view_func=routes["Informacion_controllers"])
 
 
 """
