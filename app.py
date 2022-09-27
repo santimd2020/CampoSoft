@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from routes import *
 from flask.views import MethodView
 from flask import jsonify,request
@@ -27,9 +28,10 @@ conexionActPro=Producto()
 conexionEliPro=Producto()
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/CampoSoft', methods=['POST'])
-def post(self):
+def post():
         #Va a llamar la conexiona la base de datos
         estado=conexionInfo.estado()
         if(estado=="000"):
