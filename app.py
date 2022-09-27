@@ -1,8 +1,6 @@
-from flask import Flask
+from flask import Flask,jsonify,request
 from flask_cors import CORS
 from routes import *
-from flask.views import MethodView
-from flask import jsonify,request
 from model import Informacion,Vendedor,Producto
 from validate import ValidacionCrearVendedor,ValidacionEliminarVendedor,ValidacionActualizarVendedor,ValidacionConsultarVendedor,ValidacionCrearProducto,ValidacionConsultarProducto,ValidacionActualizarProducto,ValidacionEliminarProducto
 from constantes import codigos
@@ -30,9 +28,14 @@ conexionEliPro=Producto()
 app = Flask(__name__)
 CORS(app)
 
+
+@app.route('/consultaPrueba', methods=['GET', 'POST'])
+def consultaPruebas():
+    return jsonify({'status': 'Si funciona'}),200
+
 @app.route('/CampoSoft',methods=['POST'])
 def prueba():
-     return jsonify({"status": "Usuario no valido"}), 400
+    return jsonify({"status": "Usuario no valido"}), 400
     #En caso de que retorne un error
         
 

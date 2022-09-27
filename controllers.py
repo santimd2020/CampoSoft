@@ -37,7 +37,7 @@ ReglaActulizarProducto=ValidacionActualizarProducto()
 ReglaEliminaProducto=ValidacionEliminarProducto()
 
 #Clase de informacion comprueba el estado del servicio
-class Informacion(MethodView):
+class Informacion():
     def post(self):
         #Va a llamar la conexiona la base de datos
         estado=conexionInfo.estado()
@@ -64,7 +64,7 @@ class Informacion(MethodView):
                                )},{"¡Atencion!": "Comuniquese con el administrador del sistema"},{"¡Error!":estado}),500
  
 #Clase que permite crear el vendedor  
-class RegistroVendedor(MethodView):
+class RegistroVendedor():
     def post(self):
         try:
             #Se realizan validaciones de campos a registrar.
@@ -103,7 +103,7 @@ class RegistroVendedor(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
 #Clase que permite consultar el vendedor  
-class ConsultarVendedor(MethodView):
+class ConsultarVendedor():
     def get(self):
         try:
             #Se realizan validacion para eliminae.
@@ -128,7 +128,7 @@ class ConsultarVendedor(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
  #Clase que permite consultar el vendedor  
-class ConsultarTotalVendedor(MethodView):
+class ConsultarTotalVendedor():
     def get(self):
         try:
             #Se consulta si existe en la base datos
@@ -146,7 +146,7 @@ class ConsultarTotalVendedor(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
 #Clase que permite actualizar el vendedor  
-class ActualizarVendedor(MethodView):
+class ActualizarVendedor():
     def put(self):
         try:
             #Se realizan validacion para actualizar.
@@ -182,7 +182,7 @@ class ActualizarVendedor(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
 #Clase que permite eliminar el vendedor  
-class EliminarVendedor(MethodView):
+class EliminarVendedor():
     def delete(self):
         try:
             #Se realizan validacion para eliminae.
@@ -212,7 +212,7 @@ class EliminarVendedor(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
 #Clase que permite crear el producto  
-class RegistroProducto(MethodView):
+class RegistroProducto():
     def post(self):
         try:
             #Se realizan validaciones de campos a registrar.
@@ -258,7 +258,7 @@ class RegistroProducto(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
 #Clase que permite consultar el vendedor  
-class ConsultarProducto(MethodView):
+class ConsultarProducto():
     def get(self):
         try:
             #Se realizan validacion consultar
@@ -283,7 +283,7 @@ class ConsultarProducto(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
  #Clase que permite consultar el vendedor  
-class ConsultarTotalProducto(MethodView):
+class ConsultarTotalProducto():
     def get(self):
         try:
             #Se consulta si existe en la base datos
@@ -301,7 +301,7 @@ class ConsultarTotalProducto(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
 #Clase que permite actualizar el vendedor  
-class ActualizarProducto(MethodView):
+class ActualizarProducto():
     def put(self):
         try:
             #Se realizan validacion para actualizar.
@@ -335,7 +335,7 @@ class ActualizarProducto(MethodView):
             return jsonify({"Estado":("02",""+respuesta["02"]),"¡Error!":tojson}),409
 
 #Clase que permite eliminar el vendedor  
-class EliminarProducto(MethodView):
+class EliminarProducto():
     def delete(self):
         try:
             #Se realizan validacion para eliminae.
