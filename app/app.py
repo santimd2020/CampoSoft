@@ -39,3 +39,7 @@ def estado():
                                "Alvaro Perez",
                                "Marco Antonio"
                                )},{"¡Atencion!": "Comuniquese con el administrador del sistema"},{"¡Error!":estado}),500
+
+@app.route('/prueba',methods=['POST'])
+def prueba():
+    return jsonify({'status': 'ok'}), 200
