@@ -29,7 +29,6 @@ def estado():
     #En caso de que retorne un error
     else:
         print(estado)
-        print("Va a dar respuesta 2")
         return jsonify({"estado":("01",""+respuesta["01"],"Estado del servicio: Activo","Estado de la base datos: Inactivo")},
                                {"CampoSoft":("¡Bienvenido a CampoSoft!","Un Servicio que le permitira registrar sus productos para mejorar sus ventas.",
                                "Autores:",
