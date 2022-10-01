@@ -4,7 +4,7 @@ class Informacion:
     #Funcion que permite testeeo de la conexion a la base de datos.
     def estado(self):
         try:
-            conexion = psycopg2.connect(database="persona", user="postgres", password="12345678",host="campsoft.cubqdb8xhzud.us-east-1.rds.amazonaws.com", port="5432")
+            conexion = psycopg2.connect(database="persona", user="postgres", password="12345678",host="campsoft.cubqdb8xhzud.us-east-1.rds.amazonaws.com", port="543",connect_timeout=29)
             cursor = conexion.cursor()
             conexion.commit()
             estado="000"
