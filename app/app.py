@@ -40,5 +40,5 @@ def estado():
                                )},{"¡Atencion!": "Comuniquese con el administrador del sistema"},{"¡Error!":estado}),500
 
 @app.route('/prueba',methods=['POST'])
-async def prueba():
+def prueba():
     return jsonify({'status': 'ok'}), 200
