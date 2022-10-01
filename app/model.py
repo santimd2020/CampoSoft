@@ -1,4 +1,3 @@
-from async_timeout import timeout
 import psycopg2
 #Clase que permite hacer un testeto de la conexion a la base de datos.
 class Informacion:
